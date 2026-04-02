@@ -1,0 +1,12 @@
+[Unit]
+Description=Jetson Detection Flask Infer Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/GeneralDeployment-Jetson/flask_service
+ExecStart=/usr/bin/python3 run.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
